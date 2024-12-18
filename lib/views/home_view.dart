@@ -11,6 +11,20 @@ class HomeView extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            DescriptionTextWidget(
+              text: "Breaking News",
+              color: AppColor.kBlack,
+              fontWeight: FontWeight.bold,
+            ),
+            DescriptionTextWidget(text: "Show More", color: AppColor.kBlack)
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
         SizedBox(
             width: double.infinity,
             child: Stack(children: [

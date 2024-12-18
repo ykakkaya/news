@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:news/constants/app_color.dart';
 
 class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
@@ -14,10 +15,35 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(
         text,
-        style: TextStyle(color: AppColor.kWhite),
+        style: GoogleFonts.spaceGrotesk(color: AppColor.kWhite),
       ),
       centerTitle: true,
       backgroundColor: AppColor.kAppbarColor,
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.notifications,
+            color: AppColor.kWhite,
+          ),
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.search,
+            color: AppColor.kWhite,
+          ),
+        ),
+      ],
+      leading: IconButton(
+        onPressed: () {
+          Scaffold.of(context).openDrawer();
+        },
+        icon: Icon(
+          Icons.menu,
+          color: AppColor.kWhite,
+        ),
+      )
     );
   }
 

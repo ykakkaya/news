@@ -55,6 +55,7 @@ class BaseView extends ConsumerWidget {
           ],
           backgroundColor: AppColor.kAppbarColor,
         ),
+        drawer: Drawer(),
         body: Padding(
           padding: const EdgeInsets.all(AppSizes.kPadding),
           child: bodyPage(ref.watch(indexProvider)),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:news/constants/app_color.dart';
 import 'package:news/constants/app_sizes.dart';
 import 'package:news/constants/app_text.dart';
@@ -45,6 +46,8 @@ class OnboardingView extends StatelessWidget {
                 color: AppColor.kWhite,
               ),
               ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColor.kButtonColor),
                   onPressed: () {
                     Navigator.pushAndRemoveUntil(
                       context,
@@ -54,7 +57,16 @@ class OnboardingView extends StatelessWidget {
                   },
                   child: SizedBox(
                       width: MediaQuery.of(context).size.width * 0.8,
-                      child: Center(child: Text(AppText.onBoardButtonText))))
+                      child: Center(
+                          child: Text(
+                        AppText.onBoardButtonText,
+                        style: GoogleFonts.spaceGrotesk(
+                            color: AppColor.kWhite,
+                            fontSize: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .fontSize),
+                      ))))
             ],
           ),
         ),

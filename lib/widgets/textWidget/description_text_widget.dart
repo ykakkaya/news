@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:news/constants/app_color.dart';
 
@@ -19,7 +20,7 @@ class DescriptionTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(
+      style: GoogleFonts.spaceGrotesk(
           color: color,
           fontWeight: fontWeight ?? FontWeight.normal,
           fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize),
